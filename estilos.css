@@ -1,0 +1,36 @@
+body {
+    font-family: Arial, sans-serif;
+    padding: 20px;
+}
+
+.encabezado-seccion {
+    margin-bottom: 20px;
+}
+
+.btn-crear {
+    background-color: blue;
+    color: white;
+    padding: 10px;
+    text-decoration: none;
+}
+
+.tabla {
+    border: 1px solid black;
+    max-width: 1000px;
+}
+
+.fila {
+    display: grid;
+    grid-template-columns: 50px 2fr 2fr 1fr 100px 100px 100px;
+    border-bottom: 1px solid gray;
+}
+
+.cabecera {
+    background-color: lightgray;
+    font-weight: bold;
+}
+
+.celda {
+    padding: 10px;
+    border-right: 1px solid lightgray;
+}
