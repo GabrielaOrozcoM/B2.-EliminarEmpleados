@@ -23,7 +23,25 @@ $cantidad = count($empleados);
         <h1>Listado de Empleados</h1>
         <h3>Total de empleados: <span>(<?php echo $cantidad; ?>)</span></h3>
     </div>
-
+    
+        <div class="Cabecera">
+            <div class="celdaInicial">ID</div>
+            <div class="celdaInicial">Nombre Completo</div>
+            <div class="celdaInicial">Correo</div>
+            <div class="celdaInicial">Rol</div>
+            <div class="celdaInicial">Ver Detalle</div>
+            <div class="celdaInicial">Editar</div>
+            <div class="celdaInicial">Eliminar</div>
+        </div>
+    <div class="tabla">
+            <div class="celda">ID</div>
+            <div class="celda">Gabriela Sarahi Orozco Madrigal</div>
+            <div class="celda">gabriela.orozco9107@alumnos.udg.mx</div>
+            <div class="celda">prueba</div>
+            <div class="celda">prueba</div>
+            <div class="celda">prueba</div>
+            <div class="celda">prueba</div>
+    </div>
     <!--
     <div>
         
