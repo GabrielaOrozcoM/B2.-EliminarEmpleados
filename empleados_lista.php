@@ -15,6 +15,7 @@ $cantidad = count($empleados);
     <meta charset="UTF-8">
     <title>Listado de Empleados</title>
     <link rel="stylesheet" href="estilos.css">
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
 </head>
 <body>
 
