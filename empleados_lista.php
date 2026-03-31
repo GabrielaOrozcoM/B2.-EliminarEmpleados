@@ -16,9 +16,12 @@ $cantidad = count($empleados);
     <title>Listado de Empleados</title>
     <link rel="stylesheet" href="estilos.css">
     <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script src="app.js"></script>
 </head>
 <body>
 
+    
+    <!--
     <div>
         
         <div class="encabezado-seccion">
@@ -57,7 +60,8 @@ $cantidad = count($empleados);
         </div>
 
     </div>
+            -->
 
-    <script src="app.js"></script>
+    
 </body>
 </html>
