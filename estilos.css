@@ -35,3 +35,24 @@
     border-right: 1px solid lightgray;
 }
 */
+* {
+    box-sizing: border-box;
+    margin: 0; 
+    padding: 0;
+}
+.Titulo{
+    text-align: center;
+    display: flexbox;
+    border: 1px solid black;
+    border-radius: 3px;
+    margin: 30px;
+    padding: 15px 0 15px 0;
+    background-color: azure;
+}
+h1{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color: rgba(2, 40, 56, 0.969);
+}
+body{
+    background-color: rgba(85, 82, 86, 0.468);
+}

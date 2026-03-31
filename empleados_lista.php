@@ -19,8 +19,11 @@ $cantidad = count($empleados);
     <script src="app.js"></script>
 </head>
 <body>
+    <div class="Titulo">
+        <h1>Listado de Empleados</h1>
+        <h3>Total de empleados: <span>(<?php echo $cantidad; ?>)</span></h3>
+    </div>
 
-    
     <!--
     <div>
         
