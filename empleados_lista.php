@@ -1,17 +1,17 @@
 <?php
-$servidor = "localhost";
-$usuario = "root";
-$password = "";          
-$base_datos = "empleados";  
+include "conecta.php";
 $sql = "SELECT * FROM `empleados` WHERE status = 1;";
-
 $conexion = new mysqli($servidor, $usuario, $password, $base_datos);
 if ($conexion->connect_error) {
     die("Error de conexión: " . $conexion->connect_error);
 }
-
 $resultado = $conexion->query($sql);
-$cantidad = $resultado->num_rows;
+if ($resultado) {
+    $cantidad = $resultado->num_rows;
+} else {
+    $cantidad = 0;
+    echo "Error en la consulta: " . $conexion->error;
+}
 ?>
 
 <!DOCTYPE html>
@@ -27,7 +27,8 @@ $cantidad = $resultado->num_rows;
 
     <div class="Titulo">
         <h1>Listado de Empleados</h1>
-        <h3>Total de empleados: <span>(<?php echo $cantidad; ?>)</span></h3><a href="empleados_alta.php">Crear Nuevo Registro</a>
+        <h3>Total de empleados: <span>(<?php echo $cantidad; ?>)</span></h3>
+        <a href="empleados_alta.php">Crear Nuevo Registro</a>
     </div>
     
     <div class="Cabecera">
@@ -43,14 +44,20 @@ $cantidad = $resultado->num_rows;
     <?php
     if ($resultado->num_rows > 0) {
         while($fila = $resultado->fetch_assoc()) {
+            $rolTexto = "";
+            switch($fila['rol']){
+                case "1": $rolTexto="Gerente";
+				break;
+				case "2": $rolTexto="Ejecutivo";
+				break;
+            }
             $id = $fila['ID'];
             ?>
             <div class="fila" id="fila-<?php echo $id; ?>">
                 <div class="celda"><?php echo $id; ?></div>
-                <div class="celda"><?php echo $fila['name']; ?></div>
+                <div class="celda"><p><?php echo $fila['name']; ?> <?php echo $fila['ape']; ?></p></div>
                 <div class="celda"><?php echo $fila['correo']; ?></div>
-                <div class="celda"><?php echo $fila['rol']; ?></div>
-                
+                <div class="celda"><?php echo $rolTexto; ?></div>
                 <div class="celda"><button>Ver</button></div>
                 <div class="celda"><button>Editar</button></div>
                 <div class="celda"><button onclick="elimina(<?php echo $id; ?>);">Eliminar</button></div>
